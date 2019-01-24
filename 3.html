@@ -5,18 +5,25 @@
     <title>WEB 2 - JavaScript</title>
     <link rel="stylesheet" href="practice.css">
     <script>
+      function targetSet(name) {
+        var target = document.querySelector(name);
+        return target;
+      }
+
       function nightAndDay(obj) {
         if(obj.value=='night'){
-          document.querySelector('body').style.backgroundColor='black';
-          document.querySelector('#grid').style.color='white';
-          document.querySelector('#grid ol').style.borderRightColor='white';
-          document.querySelector('span').style.borderColor='white';
+          targetSet("body").style.backgroundColor='black';
+          targetSet("#grid").style.color='white';
+
+          targetSet("#grid ol").style.borderColor='white';
+          targetSet("span").style.borderColor='white';
           obj.value='day';
         }else if(obj.value=='day'){
-          document.querySelector('body').style.backgroundColor='white';
-          document.querySelector('#grid').style.color='black';;
-          document.querySelector('#grid ol').style.borderRightColor='black';
-          document.querySelector('span').style.borderColor='black';
+          targetSet("body").style.backgroundColor='white';
+          targetSet("#grid").style.color='black';
+
+          targetSet("#grid ol").style.borderColor='black';
+          targetSet("span").style.borderColor='black';
           obj.value='night';
         }
       }
