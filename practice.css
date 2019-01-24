@@ -55,13 +55,3 @@ footer{
     border:none;
   }
 }
-
-.abs {
-  position: fixed;
-  text-align:center;
-  width: 150px;
-  height: 60px;
-  background-color: lightgreen;
-  right: -50px;
-  top: 150px;
-}
