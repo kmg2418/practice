@@ -1,12 +1,31 @@
 body{
   margin:0;
 }
+span{
+  display: block;
+  padding:.25em;
+  width: 100%;
+}
+  span.top{
+    border-bottom: 1px solid black;
+  }
+  span.bottom{
+    border-top: 1px solid black;
+  }
 a, a:visited{
   color: blue;
   text-decoration: none;
 }
-h1{
+header{
+  background-color: lightblue;
   border-bottom:1px;
+  text-align: center;
+  padding:20px;
+  margin:0;
+}
+footer{
+  background-color: #36BC9B;
+  border-top:1px;
   text-align: center;
   padding:20px;
   margin:0;
@@ -35,4 +54,14 @@ h1{
   #grid ol{
     border:none;
   }
+}
+
+.abs {
+  position: fixed;
+  text-align:center;
+  width: 150px;
+  height: 60px;
+  background-color: lightgreen;
+  right: -50px;
+  top: 150px;
 }
