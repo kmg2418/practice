@@ -1,23 +1,22 @@
 body{
   margin:0;
 }
-a{
-  color:black;
+a, a:visited{
+  color: blue;
   text-decoration: none;
 }
 h1{
-  font-size:325%;
-  text-align:center;
-  border-bottom:1px solid grey;
-  margin:0;
+  border-bottom:1px;
+  text-align: center;
   padding:20px;
+  margin:0;
 }
 #grid{
   display:grid;
   grid-template-columns: 150px 1fr;
 }
   #grid ol{
-    border-right: 1px solid grey;
+    border-right: 1px solid black;
     width:100px;
     margin:0;
     padding:20px;
