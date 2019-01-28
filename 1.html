@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>WEB 1 - HTML</title>
+    <link rel="stylesheet" href="practice.css">
+    <script src="practice.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132908143-1"></script>
     <script>
@@ -12,12 +14,14 @@
 
       gtag('config', 'UA-132908143-1');
     </script>
-    <link rel="stylesheet" href="practice.css">
   </head>
   <body>
     <header>
       <h1><a href="index.html">WEB</a></h1>
     </header>
+    <span class="top">
+      <input type="button" id="NAD" value="night" onclick="nightAndDay(this)">
+    </span>
     <div id="grid">
       <ol>
         <li><a href="1.html">HTML</a></li>
@@ -64,5 +68,11 @@
     })();
     </script>
     <!--End of Tawk.to Script-->
+    <span class="bottom">
+      <input type="button" id="NAD" value="night" onclick="nightAndDay(this)">
+    </span>
+    <footer>
+      <h3><a href="index.html">WEB</a></h3>
+    </footer>
   </body>
 </html>

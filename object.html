@@ -5,17 +5,36 @@
     <title></title>
   </head>
   <body>
+    <h1>OBJECT</h1>
+    <h2>CREATE</h2>
     <script>
       var coworkers = {
-        "programer" : ["egoing","k","sd"],
-        "designer" : ["leezche","a","ajklsf"]
+        'programer' : ['egoing','k','sd'],
+        'designer' : ['leezche','a','ajklsf']
       }
-      document.write("programer : "+coworkers.programer+"<br>");
-      document.write("designer : "+coworkers.designer+"<br>");
-      coworkers.bookkeeper = ["duru","agds","ajks"];
-      document.write("bookkeeper : "+coworkers.bookkeeper+"<br>")
-      coworkers["data scientist"] = ["taeho","asf","ksagew"];
-      document.write("data scientist : "+coworkers["data scientist"]+"<br>");
+      document.write('programer : '+coworkers.programer+'<br>');
+      document.write('designer : '+coworkers.designer+'<br>');
+      coworkers.bookkeeper = ['duru','agds','ajks'];
+      document.write('bookkeeper : '+coworkers.bookkeeper+'<br>')
+      coworkers['data scientist'] = ['taeho','asf','ksagew'];
+      document.write('data scientist : '+coworkers['data scientist']+'<br>');
+    </script>
+    <h2>Iterate</h2>
+    <script>
+      for (var key in coworkers) {
+        document.write(key+' : '+ coworkers[key]+'<br>');
+      }
+    </script>
+    <h2>PROPERTY & METHOD</h2>
+    <script>
+      coworkers.showAll = function() {
+        for (var key in coworkers) {
+          if(key!='showAll'){
+          document.write(key+' : '+ this[key]+'<br>');
+          }
+        }
+      }
+      coworkers.showAll();
     </script>
   </body>
 </html>

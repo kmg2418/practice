@@ -4,27 +4,7 @@
     <meta charset="utf-8">
     <title>WEB 2 - JavaScript</title>
     <link rel="stylesheet" href="practice.css">
-    <script>
-      function nightAndDay(obj) {
-        var target = document.querySelector('body');
-        var links = document.querySelectorAll('a');
-        if(obj.value=='night'){
-          target.style.backgroundColor='black';
-          document.querySelector('#grid').style.color='white'
-          document.querySelector('#grid ol').style.borderColor='white';
-          for (var i = 0; i < document.querySelectorAll('span').length; i++) {document.querySelectorAll('span')[i].style.borderColor='white';}
-          for (var i = 0; i < links.length; i++) {links[i].style.color='white';}
-          for (var i = 0; i < document.querySelectorAll('#NAD').length; i++) {document.querySelectorAll('#NAD')[i].value='day'}
-        }else if(obj.value=='day'){
-          target.style.backgroundColor='white';
-          document.querySelector('#grid').style.color='black';
-          document.querySelector('ol').style.borderColor='black';
-          for (var i = 0; i < document.querySelectorAll('span').length; i++) {document.querySelectorAll('span')[i].style.borderColor='black';}
-          for (var i = 0; i < links.length; i++) {links[i].style.color='black';}
-          for (var i = 0; i < document.querySelectorAll('#NAD').length; i++) {document.querySelectorAll('#NAD')[i].value='night'}
-        }
-      }
-    </script>
+    <script src="practice.js"></script>
   </head>
   <body>
     <header>
@@ -47,5 +27,8 @@
     <span class="bottom">
       <input type="button" id="NAD" value="night" onclick="nightAndDay(this)">
     </span>
+    <footer>
+      <h3><a href="index.html">WEB</a></h3>
+    </footer>
   </body>
 </html>
