@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>FUNCTION</h1>
+    <h2>BASIC</h2>
+    <ul>
+      <script>
+      function two(){
+        document.write('<li>2-1</li>');
+        document.write('<li>2-2</li>');
+      }
+        document.write('<li>1</li>');
+        two();
+        document.write('<li>3</li>');
+        two();
+      </script>
+    </ul>
+    <h2>PARAMETER & ARGUMENT</h2>
+    <script>
+      function sum(a,b) {
+        document.write(a+b+'<br>');
+      }
+      sum(3,5);
+      sum(8,12);
+    </script>
+    <h2>RETURN</h2>
+    <script>
+      function sum2(a,b){
+        return(a+b);
+      }
+      function red(a){
+        return('<div style="color:red;">'+a+'</div><br>')
+      }
+      document.write(red(sum2(3,5)));
+    </script>
+  </body>
+</html>
