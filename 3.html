@@ -5,26 +5,23 @@
     <title>WEB 2 - JavaScript</title>
     <link rel="stylesheet" href="practice.css">
     <script>
-      function targetSet(name) {
-        var target = document.querySelector(name);
-        return target;
-      }
-
       function nightAndDay(obj) {
+        var target = document.querySelector('body');
+        var links = document.querySelectorAll('a');
         if(obj.value=='night'){
-          targetSet("body").style.backgroundColor='black';
-          targetSet("#grid").style.color='white';
-
-          targetSet("#grid ol").style.borderColor='white';
-          targetSet("span").style.borderColor='white';
-          obj.value='day';
+          target.style.backgroundColor='black';
+          document.querySelector('#grid').style.color='white'
+          document.querySelector('#grid ol').style.borderColor='white';
+          for (var i = 0; i < document.querySelectorAll('span').length; i++) {document.querySelectorAll('span')[i].style.borderColor='white';}
+          for (var i = 0; i < links.length; i++) {links[i].style.color='white';}
+          for (var i = 0; i < document.querySelectorAll('#NAD').length; i++) {document.querySelectorAll('#NAD')[i].value='day'}
         }else if(obj.value=='day'){
-          targetSet("body").style.backgroundColor='white';
-          targetSet("#grid").style.color='black';
-
-          targetSet("#grid ol").style.borderColor='black';
-          targetSet("span").style.borderColor='black';
-          obj.value='night';
+          target.style.backgroundColor='white';
+          document.querySelector('#grid').style.color='black';
+          document.querySelector('ol').style.borderColor='black';
+          for (var i = 0; i < document.querySelectorAll('span').length; i++) {document.querySelectorAll('span')[i].style.borderColor='black';}
+          for (var i = 0; i < links.length; i++) {links[i].style.color='black';}
+          for (var i = 0; i < document.querySelectorAll('#NAD').length; i++) {document.querySelectorAll('#NAD')[i].value='night'}
         }
       }
     </script>
@@ -34,7 +31,7 @@
       <h1><a href="index.html">WEB</a></h1>
     </header>
     <span class="top">
-      <input type="button" value="night" onclick="nightAndDay(this)">
+      <input type="button" id="NAD" value="night" onclick="nightAndDay(this)">
     </span>
     <div id="grid">
       <ol>
@@ -47,8 +44,8 @@
         <p>내용1</p>
       </div>
     </div>
-    <footer>
-
-    </footer>
+    <span class="bottom">
+      <input type="button" id="NAD" value="night" onclick="nightAndDay(this)">
+    </span>
   </body>
 </html>

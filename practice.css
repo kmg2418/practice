@@ -3,6 +3,7 @@ body{
 }
 span{
   display: block;
+  text-align: left;
   padding:.25em;
   width: 100%;
 }
@@ -13,22 +14,22 @@ span{
     border-top: 1px solid black;
   }
 a, a:visited{
-  color: blue;
+  color: black;
   text-decoration: none;
 }
-header{
-  background-color: lightblue;
-  border-bottom:1px;
+header, footer{
   text-align: center;
   padding:20px;
   margin:0;
+}
+
+header{
+  background-color: lightblue;
+  border-bottom:1px;
 }
 footer{
   background-color: #36BC9B;
   border-top:1px;
-  text-align: center;
-  padding:20px;
-  margin:0;
 }
 #grid{
   display:grid;
@@ -38,11 +39,10 @@ footer{
     border-right: 1px solid black;
     width:100px;
     margin:0;
-    padding:20px;
-    padding-left:35px;
+    padding:0 20px 0 35px;
   }
   #grid #article{
-    padding:25px;
+    padding:0 25px 0 25px;
   }
 @media(max-width:800px){
   h1{
