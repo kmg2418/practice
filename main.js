@@ -5,7 +5,7 @@ var url = require('url');
 var app = http.createServer(function(request,response){
     var _url = request.url;
     var queryData = url.parse(_url, true).query;
-    var title = '노드 연습';
+    var title = 'WEB 2 - NODE.JS';
     var head = queryData.id;
     var txtname = queryData.id;
     if(_url == '/'){
@@ -24,12 +24,18 @@ var app = http.createServer(function(request,response){
         <html>
           <head>
             <meta charset="utf-8">
-            <title>WEB 1 - ${title}</title>
+            <title>${title}</title>
+            <link rel="stylesheet" href="css/practice.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="js/practice.js"></script>
           </head>
           <body>
             <header>
               <h1><a href="/">WEB</a></h1>
             </header>
+            <span class="top">
+              <input type="button" id="NAD" value="night" onclick="nightAndDay(this)">
+            </span>
             <div id="grid">
               <ol>
                 <li><a href="/?id=HTML">HTML</a></li>
@@ -41,6 +47,9 @@ var app = http.createServer(function(request,response){
                 <p>${description}</p>
               </div>
             </div>
+            <span class="bottom">
+              <input type="button" id="NAD" value="night" onclick="nightAndDay(this)">
+            </span>
             <footer>
               <h3><a href="index.html">WEB</a></h3>
             </footer>
