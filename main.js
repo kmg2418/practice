@@ -5,9 +5,12 @@ var url = require('url');
 var app = http.createServer(function(request,response){
     var _url = request.url;
     var queryData = url.parse(_url, true).query;
-    var title = queryData.id;
+    var title = '노드 연습';
+    var head = queryData.id;
+    var txtname = queryData.id;
     if(_url == '/'){
-      title = 'Welcome';
+      head = 'NODE.JS';
+      txtname = 'NODEJS';
     }
     if(_url == '/favicon.ico'){
         response.writeHead(404);
@@ -15,7 +18,7 @@ var app = http.createServer(function(request,response){
         return;
     }
     response.writeHead(200);
-    fs.readFile(`Data/${title}`, 'utf8', function(err, description){
+    fs.readFile(`Data/${txtname}`, 'utf8', function(err, description){
         var template = `
         <!DOCTYPE html>
         <html>
@@ -34,7 +37,7 @@ var app = http.createServer(function(request,response){
                 <li><a href="/?id=JavaScript">JavaScript</a></li>
               </ol>
               <div id="article">
-                <h2>${title}</h2>
+                <h2>${head}</h2>
                 <p>${description}</p>
               </div>
             </div>
