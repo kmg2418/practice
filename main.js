@@ -7,13 +7,11 @@ var app = http.createServer(function(request,response){
     var queryData = url.parse(_url, true).query;
     var pathname = url.parse(_url,true).pathname;
     var title = 'WEB 2 - NODE.JS';
-    var head = queryData.id;
     var textname = queryData.id;
 
     if (pathname === '/') {
         if (queryData.id === undefined) {
-            head = 'Welcome';
-            var description = 'Hello, Node.js';
+            textname = 'Welcome';
             fs.readFile(`Data/${textname}`, 'utf8', function(err, description){
                 var template = `
                 <!DOCTYPE html>
@@ -39,7 +37,7 @@ var app = http.createServer(function(request,response){
                         <li><a href="/?id=JavaScript">JavaScript</a></li>
                       </ol>
                       <div id="article">
-                        <h2>${head}</h2>
+                        <h2>${textname}</h2>
                         <p>${description}</p>
                       </div>
                     </div>
@@ -81,7 +79,7 @@ var app = http.createServer(function(request,response){
                         <li><a href="/?id=JavaScript">JavaScript</a></li>
                       </ol>
                       <div id="article">
-                        <h2>${head}</h2>
+                        <h2>${textname}</h2>
                         <p>${description}</p>
                       </div>
                     </div>
