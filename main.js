@@ -2,6 +2,9 @@ var http = require('http');
 var fs = require('fs');
 var url = require('url');
 
+var mainSection = "0000";
+var errSection = "9999";
+
 var app = http.createServer(function(request,response){
     var _url = request.url;
     var queryData = url.parse(_url, true).query;
@@ -10,9 +13,15 @@ var app = http.createServer(function(request,response){
     var textNum = queryData.data;
 
     if (pathname === '/') {
+        if (queryData.data === undefined) {
+            textNum = errSection;
+        }
         fs.readFile(`Data/${textNum}`, 'utf8', function(err, description){
             if (queryData.id === undefined) {
-                textname = 'Welcome';
+                textNum = mainSection;
+            }
+            if (description === undefined) {
+                
             }
             var template = `
             <!DOCTYPE html>
